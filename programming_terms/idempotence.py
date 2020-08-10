@@ -50,7 +50,7 @@ When it comes to building applications, consider the following scenarios:
 
 - Retry policies sending the same request many times.
 - Cached commands replayed to the application.
-Application errors sending multiple identical requests.
+- Application errors sending multiple identical requests.
 
 To protect data integrity and system health, an idempotent application contains logic that may contain the following behaviors:
 
@@ -66,3 +66,7 @@ Ultimately idempotency is achieved by ensuring a given action is possible and is
 
 Long Story Short: trying to make sure that when a function (action) is called more than once -> the same result should be obtained (and functions/actions that have this property are called 'idempotent')
 '''
+# %%
+# str is also an idempotent function !enjoy!
+
+str(str(str(str(str(str(str("mark")))))))
