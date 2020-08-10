@@ -7,15 +7,17 @@ DRY:
 '''
 
 #%%
-def homepage():
+
+def header():
     print('<div class="header">')
     print('<a href="#">home</a>')
     print('<a href="#">about</a>')
     print('<a href="#">contact</a>')
     print('</div>')
-
+    
+def homepage():
+    header()
     print('<p>welcome</p>')
-
     print('<div class="footer">')
     print('<a href="#">home</a>')
     print('<a href="#">about</a>')
@@ -23,14 +25,8 @@ def homepage():
     print('</div>')
 
 def aboutpage():
-    print('<div class="header">')
-    print('<a href="#">home</a>')
-    print('<a href="#">about</a>')
-    print('<a href="#">contact</a>')
-    print('</div>')
-
+    header()
     print('<p>welcome</p>')
-
     print('<div class="footer">')
     print('<a href="#">home</a>')
     print('<a href="#">about</a>')
@@ -38,14 +34,8 @@ def aboutpage():
     print('</div>')
 
 def contactpage():
-    print('<div class="header">')
-    print('<a href="#">home</a>')
-    print('<a href="#">about</a>')
-    print('<a href="#">contact</a>')
-    print('</div>')
-
+    header()
     print('<p>welcome</p>')
-
     print('<div class="footer">')
     print('<a href="#">home</a>')
     print('<a href="#">about</a>')
