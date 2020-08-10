@@ -38,3 +38,5 @@ def contactpage():
     footer()
 
 homepage()
+
+# now i can make changes in one place instead of multiple places (enough ctrl+D :>)
