@@ -37,6 +37,20 @@ def contactpage():
     print('<p>welcome</p>')
     footer()
 
-homepage()
+if __name__ == '__main__':
+    homepage()
 
 # now i can make changes in one place instead of multiple places (enough ctrl+D :>)
+# %%
+# some math functions 
+# these functions are tested using unit testing in another file
+class Calc:
+
+    def add(n1, n2):
+        return n1 + n2
+    def subtract(n1, n2):
+        return n1 - n2
+    def multiply(n1, n2):
+        return n1 * n2
+    def divide(n1, n2):
+        return n1 / n2
