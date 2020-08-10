@@ -43,3 +43,31 @@ print([c for c in combinations])
 print([result for result in combinations if sum(result) == 10])
 
 # permutations & combinations are iterators in python so they raise the StopIteration exception.
+
+
+# %%
+word = 'sample'
+my_letters = 'ampsle'
+
+c = itertools.combinations(my_letters, len(word))
+p = itertools.permutations(my_letters, len(my_letters))
+
+# to see why the following code won't find a match run a for loop to see all the elements of 'c'
+for i in c:
+    # combinations are not useful in this kind of problems
+    if ''.join(i) == word:
+        print("A match was found!")
+        print(i)
+else :
+    print("no match found")
+
+counter = 0
+for i in p:
+    counter += 1
+    if ''.join(i) == word:
+        print("A match was found!")
+        print(i)
+        break # it is important to stop when a match is found 
+else: # it works only if now match was found but remember to include the 'break' in the boddy of the loop in order or the 'else' to work.
+    print("no match found!")
+    print(counter)
