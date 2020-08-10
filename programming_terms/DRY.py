@@ -8,19 +8,19 @@ DRY:
 
 #%%
 
-def footer():
-    print('<div class="footer">')
+def navbar():
     print('<a href="#">home</a>')
     print('<a href="#">about</a>')
     print('<a href="#">contact</a>')
     print('</div>')
 
+def footer():
+    print('<div class="footer">')
+    navbar()
+
 def header():
     print('<div class="header">')
-    print('<a href="#">home</a>')
-    print('<a href="#">about</a>')
-    print('<a href="#">contact</a>')
-    print('</div>')
+    navbar()
     
 def homepage():
     header()
