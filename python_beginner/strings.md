@@ -70,7 +70,11 @@ print(string[4]) # output: 'o'
 print(len(string)) # output: 5 , the length (number of letters in a string)
 print(string[1:3]) # output: 'el' , because start pos is inclusive but end pos is exclusive
 print(string[1:]) # output: 'ello' , because leaving the (start/end) pos empty means (from begining/to end)
-print(string[])
+print(string[:3]) # output: 'hel'
+print(string[:]) # output: 'hello'
+print(string[::2]) # output: 'hlo'
+print(string[::-1]) # output: 'olleh'
+print(string[::-2]) # output: 'olh'
 ```
     >>=>> remember: these slicing techniques can be used with lists too.
 
