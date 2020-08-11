@@ -120,11 +120,11 @@ logging.basicConfig(filename='example.log', level=logging.INFO)
 
 def logger(func):
     def log_func(*args):
-        
+
         logging.info(
             'Running "{}" with arguments {}'.format(func.__name__, args))
         print(func(*args))
-        
+
     return log_func
 
 
@@ -143,3 +143,17 @@ add_logger(4, 5)
 
 sub_logger(10, 5)
 sub_logger(20, 10)
+
+
+
+#%%
+# x depends on y
+# y1,y2,y3
+# x1,x2,x3
+
+# y1 -> x1
+# y1 -> x2
+# y1 -> x3
+# y2 -> x1   # and so on...
+
+# where y is outer function and x is inner function
