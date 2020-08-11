@@ -86,3 +86,37 @@ print(string[::-2]) # output: 'olh'
 |---------|---------|---------|---------|
 |<u>**_chars_**</u>| r| u| n|
 |<u>**_negative-index_**</u>| -3| -2| -1|
+
+
+## string methods
+
+**Methods**: are functions that belong to an object.
+
+> **Note**: to see all methods available for a `string` object use:
+
+```python
+dir(str)
+```
+
+Here is some of the most used methods:
+
+```python
+msg = 'hello wOrLd'
+print(msg.upper()) # output: HELLO WORLD
+print(msg.lower()) # output: hello world
+print(msg.capitalize()) # output: Hello world
+print(msg.count('o')) # output: 2
+```
+
+And more about the find method:
+
+```python
+msg = 'hello WoRlD'
+print(msg.find('W')) # output: 6 , it returns the index of the letter we are looking for.
+print(msg.find('WoRlD')) # output: 6, it returns the index of the first letter of the word we are looking for.
+print(msg.find('something')) # output: -1, if it doesn't find the word we are looking for it returns -1.
+print(msg.find('z')) # output: -1
+```
+
+
+
