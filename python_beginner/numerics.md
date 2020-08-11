@@ -92,4 +92,37 @@ x = x + 1 # (x+1) is an arithmetic expressions that gets evaluated first then as
     print(abs(-100)) # ouput: 100
     print(abs(-10.33)) # ouput: 10.33
     ```
+
+<br>
     
+## Comparison Operations on Numerics
+
+    # Comparisons:
+    # Equal:             3 == 2
+    # Not Equal:         3 != 2
+    # Greater Than:      3 > 2
+    # Less Than:         3 < 2
+    # Greater or Equal:  3 >= 2
+    # Less or Equal:     3 <= 2
+
+> **Note**: The Comparisons are boolean Expressions that return only one of 2 values either `True` or `False`.
+
+<br>
+
+## Casting
+
+Casting is simply explicit conversion of one data type to another.
+
+**case**: maybe you got some numbers from a text file or from a webpage. Theses numbers are of type `<class 'str'>`.
+
+```python
+# problem: number read from a textfile/webpage
+number1 = '200'
+number2 = '300'
+print(number1 + number2) # output: '200300'
+
+# solving problem by casting
+number1 = int('200')
+number2 = int('300')
+print(number1 + number2) # output: 500
+```
