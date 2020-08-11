@@ -7,6 +7,8 @@ Clossures:
 * A closure: closes over the free variables from their environment.    
 
 * Closures are mostly used as templates.
+
+Long Story Short: whenever you find a slot machine type of structure -> use closures.
 '''
 #%%
 def outer():
@@ -157,3 +159,42 @@ sub_logger(20, 10)
 # y2 -> x1   # and so on...
 
 # where y is outer function and x is inner function
+
+
+# %%
+# comparison between using first-class functions and using closures
+
+# closures
+def tagname(tag):
+    # html_content() is declared inside of tagname() -> and tagname() is the only one that has access to (can call) the html_content()
+    # and that is why html_content has to be returned, otherwise no obj outside the scope of tagname() will be able to access html_content().
+    def html_content(content):
+        print('<{0}>{1}</{0}>'.format(tag,content))
+    return html_content # this line is mandatory iin order for closures to work properly
+
+h1 = tagname('h1')
+p = tagname('p')
+
+h1("title of page")
+p('content of page')
+
+print()
+
+# using first-class functions
+def tagname(tag, content):
+    print('<{0}>{1}</{0}>'.format(tag, content))
+
+h2 = tagname    
+h2('h2', 'welcome') # as you can see -> it is pretty useless -> use closures instead.
+print()
+
+# having fun with maps
+def fun_map(template, tag, content):
+    result = template(tag, content)
+    return result
+
+def template(tag, content):
+    return '<{0}>{1}</{0}>'.format(tag, content)
+
+print(fun_map(template, 'h2', 'this is from maps')) # i think this is less fun than closures
+# closures are more intuative and more organized.
