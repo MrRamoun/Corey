@@ -20,16 +20,16 @@ class CalcTestCase:
         self.assertTrue(add(n1, n2), n1 + n2)
 
     def test_sub(self):
-        n1 = 20
-        n2 = 4
+        n1 = 10
+        n2 = 6
         self.assertTrue(sub(n1, n2), n1 - n2)
 
     def test_mul(self):
-        n1 = 2
-        n2 = 8
+        n1 = 10
+        n2 = 6
         self.assertTrue(mul(n1, n2), n1 * n2)
 
     def test_div(self):
-        n1 = 32
-        n2 = 2
+        n1 = 10
+        n2 = 6
         self.assertTrue(div(n1, n2), n1 / n2)
