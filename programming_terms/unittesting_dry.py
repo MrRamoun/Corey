@@ -27,3 +27,7 @@ class CalcTestCase(unittest.TestCase):
 
     def test_div(self):        
         self.assertTrue(div(self.n1, self.n2), self.n1 / self.n2)
+
+if __name__ == '__main__':
+    unittest.main()
+    # TODO: fix the problems in here
