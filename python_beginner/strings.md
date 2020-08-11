@@ -108,7 +108,7 @@ print(msg.capitalize()) # output: Hello world
 print(msg.count('o')) # output: 2
 ```
 
-And more about the find method:
+And more about the **`find`** method:
 
 ```python
 msg = 'hello WoRlD'
@@ -118,5 +118,75 @@ print(msg.find('something')) # output: -1, if it doesn't find the word we are lo
 print(msg.find('z')) # output: -1
 ```
 
+The **`replace`** method:
 
+```python
+msg = 'hello world'
+msg.replace('world', 'ramoun') 
+print(msg) # output 'hello world' , because it is not making the replacement in place -> it is returning new string with those values replaced.
 
+# we need to caputer the returned value with a variable
+new_msg = msg.replace('world', 'ramoun') 
+print(new_msg) # output: 'hello ramoun'
+```
+<br>
+
+## String Formatting
+
+### 1. concatenation:
+
+pretty basic and easy to understand but really tidious because it is hard to keep track of all the plus signs espcially with long strings
+
+```python
+name = 'ramoun'
+age = '25' # wait a minute!!..don't worry will be explained later.
+
+print(name + ' is a ' + age + ' years old programmer.')
+# output: 'ramoun is a 25 years old programmer.'
+```
+
+### 2. .format():
+
+strings in python has a very userful and important method called the .format method.
+
+it is used for fromating strings easily in a readable way.
+
+```python
+name = 'ramoun'
+age = '25' # wait a minute!!..don't worry will be explained later.
+
+print('{} is a {} years old programmer.'.format(name,age))
+# output: 'ramoun is a 25 years old programmer.'
+```
+
+> **or**
+
+```python
+print('{0} is a {1} years old programmer.'.format(name,age))
+# output: 'ramoun is a 25 years old programmer.'
+```
+
+> **or**
+
+```python
+print('{name} is a {age} years old programmer.'.format(name=name, age=age))
+# output: 'ramoun is a 25 years old programmer.'
+```
+
+### 3. fstrings:
+
+> [!CAUTION]
+> fstrings are only available in python 3.6+ 
+
+basically the idea behind fstrings is to make string formatting as easy and simple as possible.
+
+```python
+print(f'{name} is a {age} years old programmer.')
+# output: 'ramoun is a 25 years old programmer.'
+```
+
+> **Note**: `fstrings` have very awesome feature too. You can actually write code within the placeholder.
+
+```python
+print(f"{name.replace('o', '#')} loves computers so much!.")
+```
