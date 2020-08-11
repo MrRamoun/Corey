@@ -1,5 +1,7 @@
 # strings
 
+<br>
+
 ## single vs double
 
 it really depends on the textual-content. If text containt single qoute -> then better use double quote and vice-versa.
@@ -49,6 +51,8 @@ and this is line 3
 
 > **Note**: if you notice, triple quotes can be used as multiline comments too. Actually they are alos used for *python code documentation* and they are called **doc strings**.
 
+<br>
+
 ## Indexing & slicing
 
 basically strings are strings (`list`s) of characters.
@@ -61,10 +65,12 @@ And python provides us with an arsenal to deal with strings (doing operations an
 
 ```python
 string = 'hello'
-print(string[0]) # output: h
-print(string[4]) # output: o
+print(string[0]) # output: 'h'
+print(string[4]) # output: 'o'
 print(len(string)) # output: 5 , the length (number of letters in a string)
-print(string[1:3]) # output: el , because start pos is inclusive but end pos is exclusive
+print(string[1:3]) # output: 'el' , because start pos is inclusive but end pos is exclusive
+print(string[1:]) # output: 'ello' , because leaving the (start/end) pos empty means (from begining/to end)
+print(string[])
 ```
     >>=>> remember: these slicing techniques can be used with lists too.
 
