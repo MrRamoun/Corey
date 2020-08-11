@@ -38,3 +38,7 @@ sometimes you want the numbers in your program to be stored as strings not ints/
 > Phone numbers -> strings  
 > student id -> numeric  
 > amount of money -> da!!
+
+## General Tips while programming
+
+- make sure to checkout the return value of each function/method you use.
