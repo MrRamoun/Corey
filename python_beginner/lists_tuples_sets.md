@@ -197,7 +197,7 @@ same as string [indexing/slicing](https://github.com/MrRamoun/Corey/blob/master/
     ```
     > **Note**: using the assignment statement leads to creating two refrences to the same address. So, The assignment just copies the reference to the list, not the actual list, so both `l` and `l2` refer to the same list after the assignment.
 
-    <img alt="photo illustrating how using the assignment statement work" strc="https://github.com/MrRamoun/Corey/blob/4269729a32eb4ed18a298b290f7e30fd9d1511dd/python_beginner/download.jpeg">
+    <img alt="photo illustrating how using the assignment statement work" src="https://github.com/MrRamoun/Corey/blob/4269729a32eb4ed18a298b290f7e30fd9d1511dd/python_beginner/download.jpeg">
 
 - using `.copy()` method [<u style="color:lime">recommended</u>]
 
@@ -281,4 +281,5 @@ tuples are immutable objects in python
 
 > **Tip**: if you want something to modify, you can use a list, but if you want something that you can loop through and acces you can use a tuple.
 
-<!-- ## Sets  -->
+## Sets 
+
