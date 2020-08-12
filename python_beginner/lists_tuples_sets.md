@@ -13,6 +13,8 @@ l = []
 l = list()
 ```
 
+> **Note**: check out the best and fastest way to create a list in python on [stackoverflow](https://stackoverflow.com/questions/20816600/best-and-or-fastest-way-to-create-lists-in-python)
+
 ### indexing:
 
 same as string [indexing/slicing](https://github.com/MrRamoun/Corey/blob/master/python_beginner/strings.md "strings lesson on github")
@@ -283,3 +285,67 @@ tuples are immutable objects in python
 
 ## Sets 
 
+are groups of values that are unorddred and also have no duplicates.
+
+### creating a set:
+
+```python
+s = {}
+print(type(s)) # output: <class 'dict'>
+s = {1,2,3,4,5}
+print(type(s)) # output: <class 'set'>
+s = set([1,2,3,4,5])
+print(type(s)) # output: <class 'set'>
+s = set()
+print(type(s)) # output: <class 'set'>
+```
+
+### accesssing a set:
+
+```python
+s = {1,2,3,4,5,6,6}
+for i in s:
+    print(i)
+```
+
+### uses of a set:
+
+sets are mostly used to check if a value is part of a set, and also to remove duplicate values because `sets` through away duplicates.
+
+unlike lists or ruples, sets don't really care about order.
+
+> **Note**: `sets` do membership tests a lot more efficiently than `lists` and `tuples`. Because sets are more optimized for this.
+
+```python
+s = {1,3,3,4}
+print(4 in s)
+```
+
+### operations on sets:
+
+- intersection: things in common
+    ```python
+    s1 = {'math','english','science'}
+    s2 = {'math','c.s','german'}
+    print(s1.intersection(s2))
+    ```
+
+- differences: things in s1 and not in s2
+
+    ```python
+    s1 = {'math','english','science'}
+    s2 = {'math','c.s','german'}
+    print(s1.difference(s2))
+    ```
+
+- union: things in both sets without repetetion
+
+    ```python
+    s1 = {'math','english','science'}
+    s2 = {'math','c.s','german'}
+    print(s1.union(s2))
+    ```
+
+- **Final Thoughts**
+
+    sets can definitly be useful in the mentioned use cases.
