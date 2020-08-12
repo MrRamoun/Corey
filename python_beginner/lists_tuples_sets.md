@@ -183,4 +183,102 @@ same as string [indexing/slicing](https://github.com/MrRamoun/Corey/blob/master/
     l = str_l.split(', ')
     print(l) # output: ['a', 'b', 'c']
     ```
+### Copying lists
 
+- using assignment statemnets [<u style="color:crimson">caution</u>]
+
+    ```python
+    l = [1,2,3]
+    l2 = l
+    print(l2) # [1, 2, 3]
+    print(hex(id(l))) # 0x7f025f4dea80
+    print(hex(id(l2))) # 0x7f025f4dea80
+    # 2 pointers to the same object
+    ```
+    > **Note**: using the assignment statement leads to creating two refrences to the same address. So, The assignment just copies the reference to the list, not the actual list, so both `l` and `l2` refer to the same list after the assignment.
+
+    <img alt="photo illustrating how using the assignment statement work" strc="https://github.com/MrRamoun/Corey/blob/4269729a32eb4ed18a298b290f7e30fd9d1511dd/python_beginner/download.jpeg">
+
+- using `.copy()` method [<u style="color:lime">recommended</u>]
+
+    ```python
+    l = [1,2,3]
+    l2 = l.copy()
+    print(l2) # [1, 2, 3]
+    print(hex(id(l))) # 0x7f025f4dea80
+    print(hex(id(l2))) # 0x7f025eceea00
+    ```
+    > **Note**: using the assignment statement leads to creating two refrences to the same address. So, altering one of the refrences will affect the value of the main list.
+
+    > **Note**: `list_obj.copy()` (available since **Python 3.3**)
+
+- using slicing technique
+
+    ```python
+    l = [1,2,3]
+    l2 = l[:]
+    print(l2) # [1, 2, 3]
+    print(hex(id(l))) # 0x7f025f4dea80
+    print(hex(id(l2))) # 0x7f0278680140
+    ```
+    > **Note**: Alex Martelli's opinion (at least back in 2007) about this is, that it is a **weird syntax** and it does not make sense to use it ever. ;) (In his opinion, the next one (`list()`) is more readable).
+    
+
+- using built-in `list()` function:
+
+    ```python
+    l = [1,2,3]
+    l2 = list(l)
+    print(l2) # [1, 2, 3]
+    print(hex(id(l))) # 0x7f025f4dea80
+    print(hex(id(l2))) # 0x7f025f4747c0
+    ```
+
+- using built-in `copy.copy()` function:
+
+    ```python
+    import copy
+    l = [1,2,3]
+    l2 = copy.copy(l)
+    print(l2) # [1, 2, 3]
+    print(hex(id(l))) # 0x7f025f4dea80
+    print(hex(id(l2))) # 0x7f025f4747c0
+    ```
+    > **Note**: This is a little slower than `list()` because it has to find out the datatype of old_list first.
+
+- If the list contains objects and you want to copy them as well, use generic `copy.deepcopy()`
+
+    ```python
+    import copy
+    l = [1,2,3]
+    l2 = copy.deepcopy(l)
+    print(l2) # [1, 2, 3]
+    print(hex(id(l))) # 0x7f025f4dea80
+    print(hex(id(l2))) # 0x7f025f4747c0
+    ```
+    > **Note**: Obviously the slowest and most memory-needing method, but sometimes unavoidable.
+
+- **FinaL Desicion:**
+
+    ```python
+    import timeit
+    l = list(range(20))
+    min(timeit.repeat(lambda: l[:]))
+    # 0.38448613602668047
+    min(timeit.repeat(lambda: list(l)))
+    # 0.6309100328944623
+    min(timeit.repeat(lambda: l.copy()))
+    # 0.38122922903858125
+    ```
+    as we can see, `l.copy()` is even faster than slicing mehtod. For more about list copying. see [this_question on stackoverflow](https://stackoverflow.com/questions/2612802/list-changes-unexpectedly-after-assignment-how-do-i-clone-or-copy-it-to-prevent "different methods to copy a list in python").
+
+
+> **Note**: In python lists are passed by refrence.
+
+## Tuples
+
+tuples are immutable objects in python
+
+> **Tip**: if you want something to modify, you can use a list, but if you want something that you can loop through and acces you can use a tuple.
+
+<!-- ## Sets  -->
