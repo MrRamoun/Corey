@@ -281,6 +281,13 @@ same as string [indexing/slicing](https://github.com/MrRamoun/Corey/blob/master/
 
 tuples are immutable objects in python
 
+### creating a tuple:
+
+```python
+t = ()
+t = (3,) # try t = (3) and see what 's gonna happen
+```
+
 > **Tip**: if you want something to modify, you can use a list, but if you want something that you can loop through and acces you can use a tuple.
 
 ## Sets 
