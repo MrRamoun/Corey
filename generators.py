@@ -1,6 +1,6 @@
 # things to remember about Generators:
 # 1. the for loop know how to handle the StopIteration Exception.
-# 2. 
+# 2. generator functions return a generator object
 
 def sqnum(nums):
     result = []
