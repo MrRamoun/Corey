@@ -1,0 +1,5 @@
+Search Results
+Featured snippet from the web
+The summary is that the OS module is responsible for interacting with the operating system, providing access to the underlying interface of the operating system, and the SYS module is responsible for the interaction between the program and the Python interpreter, providing a series of functions and variables for it.
+
+[0] https://www.google.com/search?q=different+between+os+and+sys+python&oq=different+between+os+and+sys+python&aqs=chrome..69i57j0l2.7962j0j7&sourceid=chrome&ie=UTF-8
