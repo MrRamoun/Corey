@@ -178,7 +178,7 @@ print(fun(age=22, 'hello', name='ramon'))
 
 - dictionary unpacking
 
-    in python you can convert a (dictionary) into multiple keyword args (unpack values) to pass them (indvidually) to a funciton respectivly.
+    in python you can convert a (dictionary) into multiple keyword args (named args) (unpack values) to pass them (indvidually) to a funciton respectivly.
 
     ```python
     def fun(name,age):
