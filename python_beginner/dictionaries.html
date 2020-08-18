@@ -1,0 +1,154 @@
+<h1>Dictionary</h1>
+<p>dictionaries allow us to create key-value pairs. These are 2 linked values where the <code>key</code> is a unique identifier used to access our data and the value is our data</p>
+<blockquote>
+<p><strong>Note</strong>: other languages call theses hash-maps..etc.</p>
+</blockquote>
+<h2>Creating a Dictionary</h2>
+<p><code>python
+d = dict()
+d = {}</code></p>
+<p><code>python
+user = {
+    'name': 'ramoun',
+    'age': 24,
+    'married': True,
+    'hobbies': ['computers', 'computers', 'computers', 'science']
+}
+print(user['hobbies'])</code></p>
+<blockquote>
+<p><strong>Note</strong>: <code>keys</code> can be of any immutable data type.</p>
+<p><strong>Tip</strong>: when accessing a <code>key</code> that doesn't exist using the slicing mehtod, a <strong>KeyError</strong> will be raised. Instead use the <code>.get()</code> method.</p>
+</blockquote>
+<p>```python
+user = {
+    'name': 'ramoun',
+    'age': 24,
+    'married': True,
+    'hobbies': ['computers', 'computers', 'computers', 'science']
+}
+print(user.get("age"))
+print(user.get('birth-date')) # output: None</p>
+<h1>you can also specify a default value for keys that don't exisit.</h1>
+<p>print(user.get('phone', 'Not Found')) # output: 'Not Found'
+```</p>
+<h2>Adding a New Entry to a Dictionary</h2>
+<p>```python
+user = {
+    'name': 'ramoun',
+    'age': 24,
+    'married': True,
+    'hobbies': ['computers', 'computers', 'computers', 'science']
+}</p>
+<h1>let's add a phone number</h1>
+<p>user['phone'] = '+201554112661'
+print(user)
+```</p>
+<h2>Updating a value of a Dictionary</h2>
+<ul>
+<li>
+<p>using the slicing method</p>
+<p>```python
+user = {
+    'name': 'ramoun',
+    'age': 24,
+    'married': True,
+    'hobbies': ['computers', 'computers', 'computers', 'science']
+}</p>
+<h1>let's add a phone number</h1>
+<p>user['age'] = 16
+print(user)
+```</p>
+</li>
+<li>
+<p>using the <code>.update()</code> method</p>
+<p>```python
+user = {
+    'name': 'ramoun',
+    'age': 24,
+    'married': True,
+    'hobbies': ['computers', 'computers', 'computers', 'science']
+}</p>
+<h1>let's add a phone number</h1>
+<p>user.update({'age': 15, 'phone': '+201554112661'})
+print(user)
+```</p>
+<blockquote>
+<p><strong>Note</strong>: the <code>.update()</code> is used to <em>update</em> and <em>add</em> mulitple entries to the dictionary.</p>
+</blockquote>
+</li>
+</ul>
+<h2>Removing an Entry</h2>
+<ul>
+<li>
+<p>using the <code>del</code> keyword</p>
+<p><code>python
+    user = {
+    'name': 'ramoun',
+    'age': 24,
+    'married': True,
+    'hobbies': ['computers', 'computers', 'computers', 'science']
+}
+del user['age']    
+print(user)</code></p>
+</li>
+<li>
+<p>using the <code>.pop()</code> method </p>
+<p>The pop method allows us to remove and return the removed.</p>
+<p><code>python
+    user = {
+    'name': 'ramoun',
+    'age': 24,
+    'married': True,
+    'hobbies': ['computers', 'computers', 'computers', 'science']
+}
+age = user.pop('age')
+print(user)
+print(age)</code></p>
+</li>
+</ul>
+<h2>Counting How Many Entries</h2>
+<p><code>python
+len(dict({'age': 24, 'name': 'mark'}))</code></p>
+<h2>Access Entries of a Dictionary</h2>
+<ul>
+<li>
+<p>Acessing keys</p>
+<p><code>python
+print(user.keys())</code></p>
+</li>
+<li>
+<p>Acessing values</p>
+<p><code>python
+print(user.values())</code></p>
+</li>
+<li>
+<p>Acessing keys &amp; valuse</p>
+<p><code>python
+print(user.items())</code></p>
+</li>
+<li>
+<p>Looping through items</p>
+<blockquote>
+<p><strong>Note</strong>: looping through items like lists, tuples, and sets won't yield the same result in dictionaries.</p>
+</blockquote>
+<p>```python
+d = {'name': 'linus', 'age': 30}
+for k in d:
+    print(k)</p>
+<h1>output: name age</h1>
+<h1>Note: only the keys were printed on the screen.</h1>
+<p>```</p>
+<p>The best way to do it is using the <code>.items()</code> </p>
+<p><code>python
+d = {'name': 'linus', 'age': 30}
+for k,v in d.items(): # because d.items() return a pair of 2 value.
+    print(k, v)</code></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: dictionaries are not ordered (why need order when you have the key).
+<strong>Note</strong>: order only matters when the actual keys and values are being created.</p>
+</blockquote>
+<p><code>python
+d = {'name': 'ramoun', 'name', 'hi'}
+d['name'] # returns 'hi'</code></p>
