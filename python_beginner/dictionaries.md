@@ -160,3 +160,12 @@ len(dict({'age': 24, 'name': 'mark'}))
         print(k, v)
     ```
 
+> **Note**: dictionaries are not ordered (why need order when you have the key).
+> **Note**: order only matters when the actual keys and values are being created but not in the retrieving process.
+
+```python
+d = {'name': 'ramoun', 'name', 'hi'}
+d['name'] # returns 'hi'
+```
+ 
+ 
